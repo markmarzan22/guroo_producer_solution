@@ -7,7 +7,6 @@ const FlipCards = ({ cards, onAllCardsComplete }) => {
     // copy and extend the data provided by JSON file
     useEffect(() => {
         const extendedData = cards.map((card, i) => {
-            console.log(card);
             return {
                 ...card,
                 disabled: i === 0 ? false : true, // !!TODO: Add logic so only the first card is enabled by default
@@ -20,9 +19,9 @@ const FlipCards = ({ cards, onAllCardsComplete }) => {
     // add logic to check all cards complete after every interaction
     useEffect(() => {
         if (!cardData.length) return;
-
         // !!TODO: Add logic to check if all cards are complete after every interaction
         //ADD CODE HERE....
+        cardData.filter((el) => el.completed).length === cardData.length && onAllCardsComplete();
     }, [cardData, onAllCardsComplete]);
 
     // complete card after flip and unlock next card
