@@ -21,7 +21,7 @@ const FlipCard = ({ front, back, onFlipComplete, disabled }) => {
                 ref={innerRef}
                 onTransitionEnd={handleTransitionEnd}
                 className={classes.inner}
-                style={{ transform: `rotateY(${isFlipped ? 160 : 0}deg)` }} // !!TODO: Fix card animation
+                style={{ transform: `rotateY(${isFlipped ? 180 : 0}deg)` }} // !!TODO: Fix card animation
             >
                 <div className={classes.front}>{front}</div>
                 <div className={classes.back}>{back}</div>
