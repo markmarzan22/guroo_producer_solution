@@ -6,7 +6,7 @@ const Banner = ({ data, bannerStyle, visible = true }) => {
     const myRef = useRef();
     useEffect(() => {
         myRef.current.innerHTML = description;
-    }, []);
+    }, [description]);
 
     return (
         <div className={`${styles.bannerWrapper} ${styles[bannerStyle]} ${visible ? styles.visible : ''}`}>
