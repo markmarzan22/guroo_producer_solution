@@ -1,7 +1,12 @@
+import { useEffect, useRef } from 'react';
 import styles from './Banner.module.css';
 
 const Banner = ({ data, bannerStyle, visible = true }) => {
     const { title, description, asset } = data;
+    const myRef = useRef();
+    useEffect(() => {
+        myRef.current.innerHTML = description;
+    }, []);
 
     return (
         <div className={`${styles.bannerWrapper} ${styles[bannerStyle]} ${visible ? styles.visible : ''}`}>
@@ -11,7 +16,7 @@ const Banner = ({ data, bannerStyle, visible = true }) => {
                 </div>
                 <div className={styles.content}>
                     <h1>{title}</h1>
-                    <div>{description}</div> {/* !!TODO: Format HTML correctly*/}
+                    <div ref={myRef}></div> {/* !!TODO: Format HTML correctly*/}
                 </div>
             </div>
         </div>
