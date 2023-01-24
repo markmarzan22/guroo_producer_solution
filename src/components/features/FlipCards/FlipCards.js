@@ -7,9 +7,10 @@ const FlipCards = ({ cards, onAllCardsComplete }) => {
     // copy and extend the data provided by JSON file
     useEffect(() => {
         const extendedData = cards.map((card, i) => {
+            console.log(card);
             return {
                 ...card,
-                disabled: false, // !!TODO: Add logic so only the first card is enabled by default
+                disabled: i === 0 ? false : true, // !!TODO: Add logic so only the first card is enabled by default
                 completed: false
             };
         });
@@ -36,6 +37,12 @@ const FlipCards = ({ cards, onAllCardsComplete }) => {
 
         // !!TODO: Add logic to enabled the next card when the previous card is completed
         //ADD CODE HERE....
+        if (index < cardData.length) {
+            newCardData[arrIndex + 1] = {
+                ...cardData[arrIndex + 1],
+                disabled: false
+            };
+        }
 
         setCardData(newCardData);
     };
