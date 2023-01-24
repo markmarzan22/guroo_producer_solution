@@ -27,11 +27,11 @@
         {
             "id": 2,
             "front": {
-                "title": "Difine",
+                "title": "Define",
                 "asset": "assets/define.png"
             },
             "back": {
-                "title": "Difine",
+                "title": "Define",
                 "description": "<p>Combine all your research and observe where your users' problems exit.</p>",
                 "asset": "assets/define.png"
             }
