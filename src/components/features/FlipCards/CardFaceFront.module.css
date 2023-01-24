@@ -28,8 +28,8 @@
     position: absolute;
     width: 65%;
     height: 65%;
-    left: 55%;
-    top: 55%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: block;
     transition: all 0.3s;
@@ -93,7 +93,6 @@
 
 .term h2 {
     margin: auto;
-    margin-bottom: 20px;
     font-weight: bold;
     font-size: 2.4vw;
 }
