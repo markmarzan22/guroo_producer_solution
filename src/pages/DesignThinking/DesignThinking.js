@@ -7,7 +7,7 @@ import Banner from '../../components/features/Banner/Banner';
 
 const DesignThinking = ({ data, isLoading, setLoading }) => {
     const [wrapper, imagesLoaded] = useAllImagesLoaded();
-    const [allCardsComplete, setAllCardsComplete] = useState(true); // !!TODO: Change initial value to false
+    const [allCardsComplete, setAllCardsComplete] = useState(false); // !!TODO: Change initial value to false
 
     useEffect(() => {
         if (imagesLoaded) setLoading(false);
