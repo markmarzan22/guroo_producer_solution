@@ -1,0 +1,10 @@
+:root {
+  --darkblue:#015478;
+  --lightblue:#027db4;
+}
+
+.App {
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
